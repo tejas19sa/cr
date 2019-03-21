@@ -10,14 +10,16 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 public class SiteMap implements Cloneable {
 
 	String text;
+	String url;
 	List<SiteMap> children;
 
 	public SiteMap() {
 
 	}
 
-	public SiteMap(String text) {
+	public SiteMap(String text ,String url) {
 		this.text = text;
+		this.url = url;
 	}
 
 	public void addChildren(SiteMap siteMap) {
@@ -58,4 +60,17 @@ public class SiteMap implements Cloneable {
 		siteMap.setChildren(clone);
 		return siteMap;
 	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
+	
 }
