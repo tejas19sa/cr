@@ -57,7 +57,7 @@
 			        console.info(responsedata);
 			        console.info(responsedata.siteMap);
 			        if(responsedata.status.code == 200){
-						if(responsedata.siteMap.children != undefined  && responsedata.siteMap.children != null){		        	
+						if(responsedata.siteMap != undefined && responsedata.siteMap != null &&responsedata.siteMap.children != undefined  && responsedata.siteMap.children != null){		        	
 			        	var array_name = responsedata.siteMap.children;
 				        console.log(array_name);
 				        $('input[name=visitedUrl]').val(responsedata.visitedUrl);
